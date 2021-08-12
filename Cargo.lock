@@ -78,15 +78,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "approx"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "072df7202e63b127ab55acfe16ce97013d5b97bf160489336d3f1840fd78e99e"
-dependencies = [
- "num-traits 0.2.14",
-]
-
-[[package]]
 name = "arrayvec"
 version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -118,12 +109,6 @@ name = "autocfg"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cdb031dd78e28731d87d56cc8ffef4a8f36ca26c38fe2de700543e627f8a464a"
-
-[[package]]
-name = "base64"
-version = "0.13.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "904dfeac50f3cdaba28fc6f57fdcddb75f49ed61346676a78c4ffe55877802fd"
 
 [[package]]
 name = "bitflags"
@@ -653,15 +638,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9ea835d29036a4087793836fa931b08837ad5e957da9e23886b29586fb9b6650"
 
 [[package]]
-name = "dynamic"
-version = "0.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6913dd7a514fa4bd2bf3c30850ae1de4e27c58388a9dbda22a105ad2883ea54a"
-dependencies = [
- "unsafe-any",
-]
-
-[[package]]
 name = "either"
 version = "1.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -704,25 +680,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "37ab347416e802de484e4d03c7316c48f1ecb56574dfd4a46a80f173ce1de04d"
 
 [[package]]
-name = "fixedbitset"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "398ea4fabe40b9b0d885340a2a991a44c8a645624075ad966d21f88688e2b69e"
-
-[[package]]
 name = "fnv"
 version = "1.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3f9eec918d3f24069decb9af1554cad7c880e2da24a9afd88aca000531ab82c1"
-
-[[package]]
-name = "force_graph"
-version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8dd8bc36835afa3e80eb5bc6072b25e986f00d9cdc3b9a4b738eb7d09d603326"
-dependencies = [
- "petgraph 0.5.1",
-]
 
 [[package]]
 name = "foreign-types"
@@ -946,7 +907,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1625b792e2f9267116dd41eb7d325e0ea2572ceba5069451906745e04f852f33"
 dependencies = [
  "js-sys",
- "slotmap 0.4.2",
+ "slotmap",
  "wasm-bindgen",
  "web-sys",
 ]
@@ -1189,7 +1150,7 @@ dependencies = [
  "instant",
  "libc",
  "nalgebra 0.24.1",
- "ncollide3d 0.27.0",
+ "ncollide3d",
  "num-traits 0.2.14",
  "rusttype 0.8.3",
  "serde",
@@ -1202,17 +1163,10 @@ dependencies = [
 name = "kiss3d_test"
 version = "0.1.0"
 dependencies = [
- "dynamic",
- "force_graph",
  "kiss3d",
  "nalgebra 0.26.2",
  "nannou",
- "ncollide2d",
- "ncollide3d 0.31.0",
- "petgraph 0.5.1",
- "petgraph-evcxr",
  "rand 0.7.3",
- "serde_json",
 ]
 
 [[package]]
@@ -1555,33 +1509,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "nalgebra"
-version = "0.28.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "39fe9195887b501f296ac918ecbff4650b6935da164d4902ef73e140c46a0dce"
-dependencies = [
- "approx 0.5.0",
- "matrixmultiply 0.3.1",
- "nalgebra-macros",
- "num-complex 0.4.0",
- "num-rational 0.4.0",
- "num-traits 0.2.14",
- "simba 0.5.1",
- "typenum",
-]
-
-[[package]]
-name = "nalgebra-macros"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "01fcc0b8149b4632adc89ac3b7b31a12fb6099a0317a4eb2ebff574ef7de7218"
-dependencies = [
- "proc-macro2 1.0.28",
- "quote 1.0.9",
- "syn 1.0.74",
-]
-
-[[package]]
 name = "nannou"
 version = "0.14.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1612,24 +1539,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "ncollide2d"
-version = "0.31.0"
-source = "git+https://github.com/dimforge/ncollide#0864a866f4521806f98e955b6c6eaa50e5e3663c"
-dependencies = [
- "approx 0.5.0",
- "bitflags",
- "downcast-rs",
- "either",
- "nalgebra 0.28.0",
- "num-traits 0.2.14",
- "petgraph 0.5.1",
- "simba 0.5.1",
- "slab",
- "slotmap 1.0.5",
- "smallvec 1.6.1",
-]
-
-[[package]]
 name = "ncollide3d"
 version = "0.27.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1644,25 +1553,7 @@ dependencies = [
  "petgraph 0.5.1",
  "simba 0.3.1",
  "slab",
- "slotmap 0.4.2",
- "smallvec 1.6.1",
-]
-
-[[package]]
-name = "ncollide3d"
-version = "0.31.0"
-source = "git+https://github.com/dimforge/ncollide#0864a866f4521806f98e955b6c6eaa50e5e3663c"
-dependencies = [
- "approx 0.5.0",
- "bitflags",
- "downcast-rs",
- "either",
- "nalgebra 0.28.0",
- "num-traits 0.2.14",
- "petgraph 0.5.1",
- "simba 0.5.1",
- "slab",
- "slotmap 1.0.5",
+ "slotmap",
  "smallvec 1.6.1",
 ]
 
@@ -1861,15 +1752,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "num-complex"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "26873667bbbb7c5182d4a37c1add32cdf09f841af72da53318fdb81543c15085"
-dependencies = [
- "num-traits 0.2.14",
-]
-
-[[package]]
 name = "num-integer"
 version = "0.1.44"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1917,17 +1799,6 @@ name = "num-rational"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "12ac428b1cb17fce6f731001d307d351ec70a6d202fc2e60f7d4c5e42d8f4f07"
-dependencies = [
- "autocfg 1.0.1",
- "num-integer",
- "num-traits 0.2.14",
-]
-
-[[package]]
-name = "num-rational"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d41702bd167c2df5520b384281bc111a4b5efcf7fbc4c9c222c815b07e0a6a6a"
 dependencies = [
  "autocfg 1.0.1",
  "num-integer",
@@ -2194,26 +2065,6 @@ checksum = "467d164a6de56270bd7c4d070df81d07beace25012d5103ced4e9ff08d6afdb7"
 dependencies = [
  "fixedbitset 0.2.0",
  "indexmap",
-]
-
-[[package]]
-name = "petgraph"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4a13a2fa9d0b63e5f22328828741e523766fff0ee9e779316902290dff3f824f"
-dependencies = [
- "fixedbitset 0.4.0",
- "indexmap",
-]
-
-[[package]]
-name = "petgraph-evcxr"
-version = "0.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4c164f0ab4e02b69ff6172de80d9c1a31a9dd21c15c7b728b632442a19c9fd96"
-dependencies = [
- "base64",
- "petgraph 0.6.0",
 ]
 
 [[package]]
@@ -2822,18 +2673,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "simba"
-version = "0.5.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8e82063457853d00243beda9952e910b82593e4b07ae9f721b9278a99a0d3d5c"
-dependencies = [
- "approx 0.5.0",
- "num-complex 0.4.0",
- "num-traits 0.2.14",
- "paste",
-]
-
-[[package]]
 name = "siphasher"
 version = "0.3.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2850,15 +2689,6 @@ name = "slotmap"
 version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d61b40583e0c1bd3100652ba8940939decc8808e7b2a07f4f4606c6a8a40035a"
-
-[[package]]
-name = "slotmap"
-version = "1.0.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a952280edbecfb1d4bd3cf2dbc309dc6ab523e53487c438ae21a6df09fe84bc4"
-dependencies = [
- "version_check",
-]
 
 [[package]]
 name = "smallvec"
@@ -3039,12 +2869,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "traitobject"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "efd1f82c56340fdf16f2a953d7bda4f8fdffba13d93b00844c25572110b26079"
-
-[[package]]
 name = "ttf-parser"
 version = "0.6.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3067,15 +2891,6 @@ name = "unicode-xid"
 version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8ccb82d61f80a663efe1f787a51b16b5a51e3314d6ac365b08639f52387b33f3"
-
-[[package]]
-name = "unsafe-any"
-version = "0.4.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f30360d7979f5e9c6e6cea48af192ea8fab4afb3cf72597154b8f08935bc9c7f"
-dependencies = [
- "traitobject",
-]
 
 [[package]]
 name = "vec_map"

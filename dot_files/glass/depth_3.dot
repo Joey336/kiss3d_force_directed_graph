@@ -1,0 +1,14 @@
+graph glass {
+    edge[style=solid, penwidth="5", labeldistance="10"]
+    01001 [label="01001\ncardinality 1\nradius 0.00000000e+00\nlfd 1.00000000e+00", color="#BB0043", style="filled"]
+    0100 [label="0100\ncardinality 1\nradius 0.00000000e+00\nlfd 1.00000000e+00", color="#BB0043", style="filled"]
+    01010 [label="01010\ncardinality 11\nradius 4.42372333e+00\nlfd 2.89506617e-01", color="#0D00F1", style="filled"]
+    00101 [label="00101\ncardinality 6\nradius 3.28669113e+00\nlfd 1.00000000e+00", color="#BB0043", style="filled"]
+    0010 [label="0010\ncardinality 2\nradius 3.43689435e+00\nlfd 1.00000000e+00", color="#BB0043", style="filled"]
+    00 [label="00\ncardinality 1\nradius 0.00000000e+00\nlfd 1.00000000e+00", color="#BB0043", style="filled"]
+    010101 [label="010101\ncardinality 192\nradius 5.24932714e+00\nlfd 3.18175960e-01", color="#0F00EF", style="filled"]
+    00101 -- 01010 [label="4.48066020e+00"]
+    01010 -- 010101 [label="4.40916092e+00"]
+    00101 -- 010101 [label="5.76947288e+00"]
+    0010 -- 00101 [label="4.40595986e+00"]
+}
