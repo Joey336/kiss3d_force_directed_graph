@@ -10,7 +10,7 @@ use kiss3d::nalgebra::{Point3};
 
 
 pub fn create_graph(dot_file: &str){
-    let mut window = Window::new("Kiss3d: force_directed_graph");
+    let mut window = Window::new(dot_file);
     window.set_background_color(0.5, 0.5, 0.5);
     window.set_light(Light::StickToCamera);
 
@@ -64,7 +64,7 @@ fn draw_edges(nodes_hashmap: &HashMap<String, node::Node>, edges_data: &HashMap<
 
 //creates spring for each edge in graph
 fn create_springs(edges_data: &HashMap<String, (String, String, f32)>) -> Vec<spring::Spring>{
-    let spring_multiplier = 50.;
+    let spring_multiplier = 5.;
 
     let mut return_vec: Vec<spring::Spring> = Vec::new();
 
