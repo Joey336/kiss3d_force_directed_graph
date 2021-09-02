@@ -1,9 +1,13 @@
-extern crate nannou;
-use nannou::prelude::*;
 use std::collections::HashMap;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 
+#[derive(Clone, Debug)]
+pub struct Color{
+    pub red: f32,
+    pub green: f32,
+    pub blue: f32
+}
 
 // the data for each node
 #[derive(Clone, Debug)]
@@ -12,7 +16,7 @@ pub struct NodeData {
     pub cardinality: i32, // the cluster's cardinality
     pub radius: f32,  // the radius of the cluster
     lfd: f32,         // the local fractal dimension of the cluster
-    pub color: Rgb,       // the color of the cluster
+    pub color: Color,       // the color of the cluster
     degree: i32,      // the degree of the node, or amount of connected edges
 }
 
@@ -122,14 +126,14 @@ fn get_edge_data(edge_line: String) -> (String, String, f32) {
 }
 
 // getting the color in RGB form from the hexadecimal color taken from the dot file
-fn get_color_from_hex(hex_str: String) -> nannou::color::rgb::Rgb {
+fn get_color_from_hex(hex_str: String) -> Color{
     let r_hex = &hex_str[1..3];
     let b_hex = &hex_str[5..7];
+
+    let r = i32::from_str_radix(r_hex, 16).unwrap();
+    let b = i32::from_str_radix(b_hex, 16).unwrap();
    
-    let r = f32::from_str_radix(r_hex, 16).unwrap();
-    let b = f32::from_str_radix(b_hex, 16).unwrap();
-    
-    return Rgb::new(r, 0.0, b);
+    return Color{red: r as f32, green: 0.0, blue: b as f32};
     
 }
 
