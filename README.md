@@ -17,6 +17,6 @@ This program takes in graph data through .dot files and uses a force-directed dr
 4) You can modify the create_graph method in main to include the path to any file in the dot_files folder to visualize different graphs
 
 # User Control
-left-click drag will rotate the canvas
-right-click drag will translate the canvas
-scroll wheel will zoom in/out
+left-click drag will rotate the canvas.  
+right-click drag will translate the canvas.  
+scroll wheel will zoom in/out.  
