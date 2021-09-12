@@ -7,7 +7,6 @@ edition = "2018"
 
 [dependencies]
 kiss3d = "0.29"
-nannou = "0.14"
 nalgebra = "0.26"
 rand = "0.7.3"
 
